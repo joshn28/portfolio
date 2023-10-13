@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+import { ChakraProvider } from '@chakra-ui/react';
+import { useEffect, useRef, useState } from 'react';
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import './App.css';
 
 function App() {
+
+  const [scrollY, setScrollY] = useState(null);
+  const [isDown, setIsDown] = useState(null);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > scrollY) { // scroll direction is down
+        setIsDown(true);
+      } else {
+        setIsDown(false);
+      }
+      setScrollY(currentScrollY);
+    });
+
+    if (isDown && window.screen.width >= 768) {
+      headerRef.current.classList.remove('fadeIn');
+      headerRef.current.classList.add('fadeOut');
+    } else if (window.screen.width >= 768) {
+      headerRef.current.classList.remove('fadeOut');
+      headerRef.current.classList.add('fadeIn');
+    }
+  }, [scrollY, isDown]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Header ref={headerRef} />
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </ChakraProvider>
   );
 }
 
