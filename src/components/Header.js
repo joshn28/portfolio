@@ -62,7 +62,6 @@ const Header = forwardRef((props, ref) => {
                         <MenuList>
                             <MenuItem onClick={scrollToSection}>Home</MenuItem>
                             <MenuItem onClick={scrollToSection}>About</MenuItem>
-                            <MenuItem onClick={scrollToSection}>Experience</MenuItem>
                             <MenuItem onClick={scrollToSection}>Projects</MenuItem>
                             <MenuItem onClick={scrollToSection}>Contact</MenuItem>
                         </MenuList>
