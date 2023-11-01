@@ -24,7 +24,7 @@ const Header = forwardRef((props, ref) => {
     return (
         <Center id='header'>
             <Hide below='sm'>
-                <Flex bg='gray.300' p='5' pos='fixed' w='97%' zIndex={2} top={5} borderRadius='lg' ref={ref} direction={['column-reverse', 'row']} gap={{base: 4}}>
+                <Flex bg='var(--chakra-colors-chakra-body-bg)'  p='5' pos='fixed' w='97%' zIndex={2} top={5} borderRadius='lg' ref={ref} direction={['column-reverse', 'row']} gap={{base: 4}}>
                     <Flex gap='7' direction='row' align='center' justify={{ base: 'center' }}>
                         <Link href='https://github.com/joshn28'>
                             <Button colorScheme='gray' leftIcon={<FaGithub />}>Github</Button>
@@ -37,7 +37,6 @@ const Header = forwardRef((props, ref) => {
                     <Flex gap='8' direction={['column', 'row']} align='center'>
                         <Link fontWeight='bold' onClick={scrollToSection}>Home</Link>
                         <Link fontWeight='bold' onClick={scrollToSection}>About</Link>
-                        <Link fontWeight='bold' onClick={scrollToSection}>Experience</Link>
                         <Link fontWeight='bold' onClick={scrollToSection}>Projects</Link>
                         <Link fontWeight='bold' onClick={scrollToSection}>Contact</Link>
                     </Flex>

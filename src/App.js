@@ -3,10 +3,10 @@ import { useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
-import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import './App.css';
+import theme from './theme';
 
 function App() {
 
@@ -35,11 +35,10 @@ function App() {
   }, [scrollY, isDown]);
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Header ref={headerRef} />
       <Home />
       <About />
-      <Experience />
       <Projects />
       <Contact />
     </ChakraProvider>
