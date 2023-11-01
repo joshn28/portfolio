@@ -1,4 +1,5 @@
 import {
+    Button,
     Card,
     CardHeader,
     CardBody,
@@ -34,7 +35,9 @@ function ProjectCard(props) {
             </CardBody>
             <CardFooter>
                 <Link href={props.link}>
-                    <Icon as={FaGithub} />
+                    <Button>
+                        <Icon as={FaGithub} />
+                    </Button>
                 </Link>
             </CardFooter>
         </Card>
