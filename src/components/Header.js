@@ -24,7 +24,7 @@ const Header = forwardRef((props, ref) => {
     return (
         <Center id='header'>
             <Hide below='sm'>
-                <Flex bg='var(--chakra-colors-chakra-body-bg)'  p='5' pos='fixed' w='97%' zIndex={2} top={5} borderRadius='lg' ref={ref} direction={['column-reverse', 'row']} gap={{base: 4}}>
+                <Flex p='5' pos='fixed' w='97%' zIndex={2} top={5} borderRadius='lg' ref={ref} direction={['column-reverse', 'row']} gap={{base: 4}}>
                     <Flex gap='7' direction='row' align='center' justify={{ base: 'center' }}>
                         <Link href='https://github.com/joshn28'>
                             <Button colorScheme='gray' leftIcon={<FaGithub />}>Github</Button>
