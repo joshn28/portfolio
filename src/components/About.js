@@ -10,9 +10,9 @@ function About() {
 
     return (
         <Box id='about'>
-            <Flex minH='100vh' align='center' w={[null,'70%']} px={{base: 10}} py={{base: 20}} m='0 auto' justify='center' direction='column' gap={[10, 10]}>
-                <Flex align='center' justify='center' gap={[5, 20]} w='100%' direction={{base: 'column', xl: 'row'}}>
-                    <Flex gap={10} align='center'>
+            <Flex minH='100vh' align='center' w={{ base: '100%', md: '80%', lg: '75%', xl: '55%' }} px={{ base: 10 }} py={{ base: 20 }} m='0 auto' justify='center' direction='column' gap={[10, 10]}>
+                <Flex align='center' justify='center' gap={{ base: 5, lg: 15, xl: 20 }} w='100%' direction={{base: 'column', xl: 'row'}}>
+                    <Flex align='center'>
                         <Avatar
                         boxSize={['2xs', 'xs']}
                         name='Joshua Nobleza'
@@ -35,7 +35,7 @@ function About() {
                 </Flex>
                 <Stack direction={{base: 'column', lg: 'row'}} align='center' justify='center' spacing={10}>
                     <Text fontWeight='bold' fontSize={['md', 'lg']}>Tech Stack</Text>
-                    <Stack direction={{base: 'column', lg: 'row'}} align='center' justify='center' spacing={10} bg='var(--chakra-colors-chakra-body-text)' p='1em' borderRadius='sm' textColor='blackAlpha.800'>
+                    <Stack direction={{base: 'column', md: 'row'}} align='center' justify='center' spacing={10} bg='var(--chakra-colors-chakra-body-text)' p='1em' borderRadius='sm' textColor='blackAlpha.800'>
                         <Image
                             src='https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg'
                             alt='html5'
