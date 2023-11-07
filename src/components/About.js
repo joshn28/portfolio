@@ -10,7 +10,7 @@ function About() {
 
     return (
         <Box id='about'>
-            <Flex minH='100vh' align='center' w={[null,'50%']} px={{base: 10}} py={{base: 20}} m='0 auto' justify='center' direction='column' gap={[10, 10]}>
+            <Flex minH='100vh' align='center' w={[null,'70%']} px={{base: 10}} py={{base: 20}} m='0 auto' justify='center' direction='column' gap={[10, 10]}>
                 <Flex align='center' justify='center' gap={[5, 20]} w='100%' direction={{base: 'column', xl: 'row'}}>
                     <Flex gap={10} align='center'>
                         <Avatar
@@ -33,9 +33,9 @@ function About() {
                         </Text>
                     </Flex>
                 </Flex>
-                <Stack direction={['column', 'row']} align='center' justify='center' spacing={10}>
+                <Stack direction={{base: 'column', lg: 'row'}} align='center' justify='center' spacing={10}>
                     <Text fontWeight='bold' fontSize={['md', 'lg']}>Tech Stack</Text>
-                    <Stack direction={['column', 'row']} align='center' justify='center' spacing={10} bg='var(--chakra-colors-chakra-body-text)' p='1em' borderRadius='sm'>
+                    <Stack direction={{base: 'column', lg: 'row'}} align='center' justify='center' spacing={10} bg='var(--chakra-colors-chakra-body-text)' p='1em' borderRadius='sm'>
                         <Image
                             src='https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg'
                             alt='html5'
