@@ -35,7 +35,7 @@ function About() {
                 </Flex>
                 <Stack direction={{base: 'column', lg: 'row'}} align='center' justify='center' spacing={10}>
                     <Text fontWeight='bold' fontSize={['md', 'lg']}>Tech Stack</Text>
-                    <Stack direction={{base: 'column', lg: 'row'}} align='center' justify='center' spacing={10} bg='var(--chakra-colors-chakra-body-text)' p='1em' borderRadius='sm'>
+                    <Stack direction={{base: 'column', lg: 'row'}} align='center' justify='center' spacing={10} bg='var(--chakra-colors-chakra-body-text)' p='1em' borderRadius='sm' textColor='blackAlpha.800'>
                         <Image
                             src='https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg'
                             alt='html5'
@@ -59,6 +59,11 @@ function About() {
                         <Image
                             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
                             alt="express"
+                            {...imageSize}
+                        />
+                        <Image
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                            alt="nodejs"
                             {...imageSize}
                         />
                     </Stack>
