@@ -1,11 +1,12 @@
 import {
     Button,
+    ButtonGroup,
     Card,
-    CardHeader,
     CardBody,
     CardFooter,
     Heading,
     Text,
+    Image,
     Link,
     Icon,
     Tag,
@@ -13,16 +14,20 @@ import {
     Wrap,
     WrapItem
 } from "@chakra-ui/react";
-import { FaGithub } from 'react-icons/fa6'
+import { FaGithub } from 'react-icons/fa6';
+import { FiExternalLink } from "react-icons/fi";
 
 function ProjectCard(props) {
     return (
         <Card>
-            <CardHeader>
-                <Heading as='h3' size='lg'>{props.title}</Heading>
-            </CardHeader>
             <CardBody>
-                <Stack spacing={5}>
+                <Image
+                src={props.image}
+                alt='project webpage'
+                borderRadius='lg'
+                />
+                <Stack spacing={5} mt={5}>
+                    <Heading as='h3' size='md'>{props.title}</Heading>
                     <Text>{props.description}</Text>
                     <Wrap spacing={4}>
                         {props.tags.map(tag => {
@@ -34,11 +39,22 @@ function ProjectCard(props) {
                 </Stack>
             </CardBody>
             <CardFooter>
-                <Link href={props.link}>
-                    <Button>
-                        <Icon as={FaGithub} />
-                    </Button>
-                </Link>
+                <ButtonGroup spacing='2'>
+                    <Link href={props.link}>
+                        <Button>
+                            <Icon as={FaGithub} />
+                        </Button>
+                    </Link>
+                    {props.demo ? (
+                        <Link href={props.demo}>
+                            <Button>
+                                <Icon as={FiExternalLink} />
+                            </Button>
+                        </Link>
+                    ) : (
+                        <></>
+                    )}
+                </ButtonGroup>
             </CardFooter>
         </Card>
     );

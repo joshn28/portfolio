@@ -44,9 +44,9 @@ function Contact() {
 
     return (
         <Flex align='center' h='100vh' justify='center'>
-          <Container id='contact' centerContent border='2px' borderColor={['transparent', 'gray.300']} p={10} borderRadius='lg'>
+          <Container id='contact' centerContent borderRadius='lg'>
               <Center>
-                  <Heading size='2xl' mb={5}>Contact Me</Heading>
+                  <Heading size='xl' mb={5}>CONTACT ✉️</Heading>
               </Center>
               <form
                 ref={formRef}
