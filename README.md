@@ -1,3 +1,3 @@
 # Portfolio
 
-A place to showcase my work.
+A personal landing page to showcase my work.
